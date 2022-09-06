@@ -1,82 +1,146 @@
 
 
 
+const cerroCatedral = {
+    nombre: `Cerro Catedral`,
+    precio: 3000,
+}
+const islaVictoria = {
+    nombre: `Isla Victoria`,
+    precio: 3500,
+}
+const puertoBlest = {
+    nombre: `Puerto Blest`,
+    precio: 4000,
+}
+const sanMartinDeLosAndes = {
+    nombre: `San Martin De Los Andes`,
+    precio: 5000,
+}  
 
-let excursión = prompt(`Donde tenes ganas de ir hoy?
+let excursion = prompt(`Donde tenes ganas de ir hoy?
 
-1:Cerro Catedral
-2:Isla Victoria
-3:Puerto Blest
-4:San Martin de los Andes`
+
+Cerro Catedral
+Isla Victoria
+Puerto Blest
+San Martin De Los Andes`
 );
 
 
-switch (excursión) {
-    case "1":
-    console.log(`excursión= ${"Cerro Catedral"}`);
-    break;
-    case "2":
+
+switch (excursion) {
+    case "Cerro Catedral":
+        console.log("Cerro Catedral");
+        break;
+    case "Isla Victoria":
         console.log("Isla Victoria");
-    break;
-    case "3":
+        break;
+    case "Puerto Blest":
         console.log("Puerto Blest");
-    break;
-    case "4":
-        console.log("San Martin de los Andes");
-    break;
+        break;
+    case "San Martin De Los Andes":
+        console.log("San Martin de los Andes")
+        break;
     default:
-        console.log("No se registra elección");
-    break;
+        console.log(`Ingreso Invalido`);
+        break;    
 }
+alert(`Elegiste ${excursion}`);
 
-switch (excursión) {
-    case "1":
-    console.log(`Elección: ${excursión}, valor $3000`);
-    break;
-    case "2":
-    console.log(`Elección: ${excursión}, valor $4000`);
-    break;
-    case "3":
-    console.log(`Elección: ${excursión}, valor $3800`);
-    break;
-    case "4":
-    console.log(`Elección: ${excursión}, valor $4500`);
-    break;
-    default:
-    console.log("No se registra elección");
-    break;
+if (excursion == "Cerro Catedral"){
+    console.log(cerroCatedral);
+} else if (excursion == "Isla Victoria"){
+    console.log(islaVictoria);
+} else if (excursion == "Puerto Blest"){
+    console.log(puertoBlest);
+} else if (excursion == "San Martin De Los Andes"){
+    console.log(sanMartinDeLosAndes);
 }
 
 
+let formaDePago = prompt(`De que forma queres abonar?
+
+Efectivo
+Tarjeta de Credito
+`);
 
 
-let FormaDePago = prompt(`De que forma queres abonar?
 
-1:Efectivo
-2:Tarjeta de Credito
-3:Transferencia
-4:Mercadopago`);
-
-
-switch (FormaDePago) {
-    case "1":
+switch (formaDePago) {
+    case "Efectivo":
     console.log("Efectivo");
     break;
-    case "2":
+    case "Tarjeta de Credito":
         console.log("Tarjeta de Credito");
     break;
-    case "3":
-        console.log("Transferencia");
-    break;
-    case "4":
-        console.log("Mercadopago");
-    break;
     default:
-        console.log("No se registra elección");
+        alert("Metodo de pago no aceptado");
     break;
+    
 }
 
-let cantidadDePax = Number(prompt("Ingrese cantidad de pax"));
-console.log(cantidadDePax);
 
+
+if (formaDePago == "Tarjeta de Credito"){
+    let  cuotas = prompt(`Elegi Cantidad de cuotas
+    
+    1 Cuota
+    2 Cuotas
+    3 Cuotas`)
+    
+    
+    switch (cuotas) {
+            case "1 Cuota ":
+            console.log("1 Cuota");
+            break;
+            case "2 Cuotas":
+                console.log("2 Cuotas");
+            break;
+            case "3 Cuotas":
+                console.log("3 Cuotas");
+            break;
+            default:
+                alert("Ingreso Invalido");
+            break;
+            
+        }   
+    
+    if (cuotas == "1 Cuota") {
+        console.log(cerroCatedral.precio);
+    } else if (excursion == "Isla Victoria"){
+        console.log(islaVictoria.precio);
+    } else if (excursion == "Puerto Blest"){
+        console.log(puertoBlest.precio);
+    } else if (excursion == "San Martin De Los Andes"){
+        console.log(sanMartinDeLosAndes.precio);
+    }
+    
+    if (cuotas == "2 Cuotas") {
+        console.log(cerroCatedral.precio / 2)
+    } else if (excursion == "Isla Victoria"){
+        console.log(islaVictoria.precio / 2);
+    } else if (excursion == "Puerto Blest"){
+        console.log(puertoBlest.precio / 2);
+    } else if (excursion == "San Martin De Los Andes"){
+        console.log(sanMartinDeLosAndes.precio / 2);
+    }
+    
+    if (cuotas == "3 Cuotas") {
+        console.log(cerroCatedral.precio / 3);
+    } else if (excursion == "Isla Victoria"){
+        console.log(islaVictoria.precio / 3);
+    } else if (excursion == "Puerto Blest"){
+        console.log(puertoBlest.precio / 3);
+    } else if (excursion == "San Martin De Los Andes"){
+        console.log(sanMartinDeLosAndes.precio / 3);
+    }
+    
+    
+    
+    alert("Gracias Por su Compra");
+} else {
+    alert("No ingreso datos");
+    
+}
 
